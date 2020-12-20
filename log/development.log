@@ -1,0 +1,1071 @@
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE DATABASE "rails_react_recipe_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "rails_react_recipe_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2020-12-20 23:01:45 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 2418ms (Views: 2415.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:07:53 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (1.1ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: db5b68d1fd5941dadcb0
+Version: webpack 4.44.2
+Time: 15833ms
+Built at: 12/20/2020 11:08:14 PM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-e7482a14f3b1a4e3faa3.js   2.62 MiB        Index  [emitted] [immutable]  Index
+      js/Index-e7482a14f3b1a4e3faa3.js.map   2.89 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-e7482a14f3b1a4e3faa3.js js/Index-e7482a14f3b1a4e3faa3.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 752 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 38 hidden modules
+
+Completed 200 OK in 20688ms (Views: 20686.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:09:01 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (84.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4756338405265642755)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRecipes (20201220121138)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (31.0ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying NOT NULL, "ingredients" text NOT NULL, "instruction" text NOT NULL, "image" character varying DEFAULT 'https://raw.githubusercontent.com/do-community/react_rails_recipe/master/app/assets/images/Sammy_Meal.jpg', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201220121138_create_recipes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (5.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201220121138"]]
+  ↳ bin/rails:4
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (2.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-20 12:17:27.319603"], ["updated_at", "2020-12-20 12:17:27.319603"]]
+  ↳ bin/rails:4
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(4756338405265642755)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/rails/info/routes" for ::1 at 2020-12-20 23:26:23 +1100
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kyleswaffield/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/kyleswaffield/.rvm/gems/ruby-2.7.0/gems/railties-5.2.4.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/kyleswaffield/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.4.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (21.9ms)
+  Rendered /Users/kyleswaffield/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.4.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (21.4ms)
+  Rendered /Users/kyleswaffield/.rvm/gems/ruby-2.7.0/gems/railties-5.2.4.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (50.3ms)
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:26:26 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 77ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:33:26 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:33:34 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mRecipe Create (14.6ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "ingredients", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Recipe 1"], ["ingredients", "227g tub clotted cream, 25g butter, 1 tsp cornflour,100g parmesan, grated nutmeg, 250g fresh fettuccine or tagliatelle, snipped chives or chopped parsley to serve (optional)"], ["instruction", "In a medium saucepan, stir the clotted cream, butter, and cornflour over a low-ish heat and bring to a low simmer. Turn off the heat and keep warm."], ["created_at", "2020-12-20 12:35:28.704275"], ["updated_at", "2020-12-20 12:35:28.704275"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mRecipe Create (0.9ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "ingredients", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Recipe 2"], ["ingredients", "227g tub clotted cream, 25g butter, 1 tsp cornflour,100g parmesan, grated nutmeg, 250g fresh fettuccine or tagliatelle, snipped chives or chopped parsley to serve (optional)"], ["instruction", "In a medium saucepan, stir the clotted cream, butter, and cornflour over a low-ish heat and bring to a low simmer. Turn off the heat and keep warm."], ["created_at", "2020-12-20 12:35:28.726259"], ["updated_at", "2020-12-20 12:35:28.726259"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mRecipe Create (1.9ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "ingredients", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Recipe 3"], ["ingredients", "227g tub clotted cream, 25g butter, 1 tsp cornflour,100g parmesan, grated nutmeg, 250g fresh fettuccine or tagliatelle, snipped chives or chopped parsley to serve (optional)"], ["instruction", "In a medium saucepan, stir the clotted cream, butter, and cornflour over a low-ish heat and bring to a low simmer. Turn off the heat and keep warm."], ["created_at", "2020-12-20 12:35:28.734356"], ["updated_at", "2020-12-20 12:35:28.734356"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mRecipe Create (1.9ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "ingredients", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Recipe 4"], ["ingredients", "227g tub clotted cream, 25g butter, 1 tsp cornflour,100g parmesan, grated nutmeg, 250g fresh fettuccine or tagliatelle, snipped chives or chopped parsley to serve (optional)"], ["instruction", "In a medium saucepan, stir the clotted cream, butter, and cornflour over a low-ish heat and bring to a low simmer. Turn off the heat and keep warm."], ["created_at", "2020-12-20 12:35:28.740807"], ["updated_at", "2020-12-20 12:35:28.740807"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mRecipe Create (0.6ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "ingredients", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Recipe 5"], ["ingredients", "227g tub clotted cream, 25g butter, 1 tsp cornflour,100g parmesan, grated nutmeg, 250g fresh fettuccine or tagliatelle, snipped chives or chopped parsley to serve (optional)"], ["instruction", "In a medium saucepan, stir the clotted cream, butter, and cornflour over a low-ish heat and bring to a low simmer. Turn off the heat and keep warm."], ["created_at", "2020-12-20 12:35:28.746409"], ["updated_at", "2020-12-20 12:35:28.746409"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mRecipe Create (0.9ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "ingredients", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Recipe 6"], ["ingredients", "227g tub clotted cream, 25g butter, 1 tsp cornflour,100g parmesan, grated nutmeg, 250g fresh fettuccine or tagliatelle, snipped chives or chopped parsley to serve (optional)"], ["instruction", "In a medium saucepan, stir the clotted cream, butter, and cornflour over a low-ish heat and bring to a low simmer. Turn off the heat and keep warm."], ["created_at", "2020-12-20 12:35:28.750518"], ["updated_at", "2020-12-20 12:35:28.750518"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mRecipe Create (1.0ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "ingredients", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Recipe 7"], ["ingredients", "227g tub clotted cream, 25g butter, 1 tsp cornflour,100g parmesan, grated nutmeg, 250g fresh fettuccine or tagliatelle, snipped chives or chopped parsley to serve (optional)"], ["instruction", "In a medium saucepan, stir the clotted cream, butter, and cornflour over a low-ish heat and bring to a low simmer. Turn off the heat and keep warm."], ["created_at", "2020-12-20 12:35:28.756308"], ["updated_at", "2020-12-20 12:35:28.756308"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mRecipe Create (0.8ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "ingredients", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Recipe 8"], ["ingredients", "227g tub clotted cream, 25g butter, 1 tsp cornflour,100g parmesan, grated nutmeg, 250g fresh fettuccine or tagliatelle, snipped chives or chopped parsley to serve (optional)"], ["instruction", "In a medium saucepan, stir the clotted cream, butter, and cornflour over a low-ish heat and bring to a low simmer. Turn off the heat and keep warm."], ["created_at", "2020-12-20 12:35:28.762568"], ["updated_at", "2020-12-20 12:35:28.762568"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mRecipe Create (0.7ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "ingredients", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Recipe 9"], ["ingredients", "227g tub clotted cream, 25g butter, 1 tsp cornflour,100g parmesan, grated nutmeg, 250g fresh fettuccine or tagliatelle, snipped chives or chopped parsley to serve (optional)"], ["instruction", "In a medium saucepan, stir the clotted cream, butter, and cornflour over a low-ish heat and bring to a low simmer. Turn off the heat and keep warm."], ["created_at", "2020-12-20 12:35:28.768645"], ["updated_at", "2020-12-20 12:35:28.768645"]]
+  ↳ db/seeds.rb:6
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+Started GET "/" for ::1 at 2020-12-20 23:35:33 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:35:41 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:43:33 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (3.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:43:42 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:45:17 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.4ms)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 997073f78c996e398f62
+Version: webpack 4.44.2
+Time: 6870ms
+Built at: 12/20/2020 11:45:28 PM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-c1804e6b2952363f3b70.js   2.62 MiB        Index  [emitted] [immutable]  Index
+      js/Index-c1804e6b2952363f3b70.js.map   2.89 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-c1804e6b2952363f3b70.js js/Index-c1804e6b2952363f3b70.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1000 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 38 hidden modules
+
+ERROR in ./app/javascript/routes/Index.jsx
+Module not found: Error: Can't resolve '../components/Recipes' in '/Users/kyleswaffield/sei/projects/rails_react_recipe/app/javascript/routes'
+ @ ./app/javascript/routes/Index.jsx 5:0-44 33:13-20
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+Completed 200 OK in 11298ms (Views: 11297.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:47:22 +1100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kyleswaffield/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (1.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2596ms (Views: 2593.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:50:47 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: 09f26747fd3f2d143b1c
+Version: webpack 4.44.2
+Time: 6404ms
+Built at: 12/20/2020 11:50:58 PM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-b865982e2d58326729a4.js   2.62 MiB        Index  [emitted] [immutable]  Index
+      js/Index-b865982e2d58326729a4.js.map   2.89 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-b865982e2d58326729a4.js js/Index-b865982e2d58326729a4.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1010 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 38 hidden modules
+
+Completed 200 OK in 10407ms (Views: 10405.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:51:46 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: f2b3856bffa5fea4f1b8
+Version: webpack 4.44.2
+Time: 5469ms
+Built at: 12/20/2020 11:51:55 PM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-1149c1d04cb5e21f4b64.js   2.47 MiB        Index  [emitted] [immutable]  Index
+      js/Index-1149c1d04cb5e21f4b64.js.map   2.75 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-1149c1d04cb5e21f4b64.js js/Index-1149c1d04cb5e21f4b64.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 4.45 KiB {Index} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 17 hidden modules
+
+ERROR in ./app/javascript/routes/Index.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/kyleswaffield/sei/projects/rails_react_recipe/app/javascript/routes/Index.jsx: JSX attributes must only be assigned a non-empty expression (10:48)
+
+   8 |     <Switch>
+   9 |       <Route path="/" exact component={Home} />
+> 10 |       // <Route path="/recipes" exact component={} />
+     |                                                 ^
+  11 |     </Switch>
+  12 |   </Router>
+  13 | );
+    at Object._raise (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:748:17)
+    at Object.raiseWithData (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:741:17)
+    at Object.raise (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:735:17)
+    at Object.jsxParseAttributeValue (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4583:16)
+    at Object.jsxParseAttribute (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4632:44)
+    at Object.jsxParseOpeningElementAfterName (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4652:28)
+    at Object.jsxParseOpeningElementAt (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4645:17)
+    at Object.jsxParseElementAt (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4677:33)
+    at Object.jsxParseElementAt (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElementAt (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4693:32)
+    at Object.jsxParseElement (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4751:17)
+    at Object.parseExprAtom (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4758:19)
+    at Object.parseExprSubscripts (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9963:23)
+    at Object.parseMaybeAssign (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9926:21)
+    at /Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9893:39
+    at Object.allowInAnd (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:11547:12)
+    at Object.parseMaybeAssignAllowIn (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9893:17)
+    at Object.parseParenAndDistinguishExpression (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10752:28)
+    at Object.parseExprAtom (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10470:21)
+    at Object.parseExprAtom (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4763:20)
+    at Object.parseExprSubscripts (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9963:23)
+    at Object.parseMaybeAssign (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9926:21)
+ @ ./app/javascript/components/App.jsx 2:0-37 4:64-70
+ @ ./app/javascript/packs/Index.jsx
+
+Completed 200 OK in 9218ms (Views: 9216.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-20 23:52:15 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: eca3d219611da5642419
+Version: webpack 4.44.2
+Time: 6346ms
+Built at: 12/20/2020 11:52:25 PM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-9da7cd116969ad89a1d1.js   2.62 MiB        Index  [emitted] [immutable]  Index
+      js/Index-9da7cd116969ad89a1d1.js.map   2.89 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-9da7cd116969ad89a1d1.js js/Index-9da7cd116969ad89a1d1.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 801 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 38 hidden modules
+
+Completed 200 OK in 10640ms (Views: 10637.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-20 23:54:33 +1100
+  
+SyntaxError (/Users/kyleswaffield/sei/projects/rails_react_recipe/app/controllers/api/v1/recipes_controller.rb:8: syntax error, unexpected '=', expecting ';' or '\n'
+    recipe = Recipe.create!(recipe_params)
+           ^
+/Users/kyleswaffield/sei/projects/rails_react_recipe/app/controllers/api/v1/recipes_controller.rb:25: syntax error, unexpected &., expecting ';' or '\n'
+    recipe&.destroy
+          ^~
+/Users/kyleswaffield/sei/projects/rails_react_recipe/app/controllers/api/v1/recipes_controller.rb:27: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/controllers/api/v1/recipes_controller.rb:8: syntax error, unexpected '=', expecting ';' or '\n'
+app/controllers/api/v1/recipes_controller.rb:25: syntax error, unexpected &., expecting ';' or '\n'
+app/controllers/api/v1/recipes_controller.rb:27: syntax error, unexpected `end', expecting end-of-input
+  [1m[36mRecipe Load (2.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:00:29 +1100
+  
+SyntaxError (/Users/kyleswaffield/sei/projects/rails_react_recipe/app/controllers/api/v1/recipes_controller.rb:8: syntax error, unexpected '=', expecting ';' or '\n'
+    recipe = Recipe.create(recipe_params)
+           ^
+/Users/kyleswaffield/sei/projects/rails_react_recipe/app/controllers/api/v1/recipes_controller.rb:25: syntax error, unexpected &., expecting ';' or '\n'
+    recipe&.destroy
+          ^~
+/Users/kyleswaffield/sei/projects/rails_react_recipe/app/controllers/api/v1/recipes_controller.rb:27: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/controllers/api/v1/recipes_controller.rb:8: syntax error, unexpected '=', expecting ';' or '\n'
+app/controllers/api/v1/recipes_controller.rb:25: syntax error, unexpected &., expecting ';' or '\n'
+app/controllers/api/v1/recipes_controller.rb:27: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:05:25 +1100
+Processing by Api::V1::RecipesController#index as HTML
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 35ms (Views: 14.9ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:05:50 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.9ms)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 997073f78c996e398f62
+Version: webpack 4.44.2
+Time: 6258ms
+Built at: 12/21/2020 12:06:00 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-c1804e6b2952363f3b70.js   2.62 MiB        Index  [emitted] [immutable]  Index
+      js/Index-c1804e6b2952363f3b70.js.map   2.89 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-c1804e6b2952363f3b70.js js/Index-c1804e6b2952363f3b70.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1000 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 38 hidden modules
+
+ERROR in ./app/javascript/routes/Index.jsx
+Module not found: Error: Can't resolve '../components/Recipes' in '/Users/kyleswaffield/sei/projects/rails_react_recipe/app/javascript/routes'
+ @ ./app/javascript/routes/Index.jsx 5:0-44 33:13-20
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+Completed 200 OK in 10694ms (Views: 10691.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:06:51 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: 09f26747fd3f2d143b1c
+Version: webpack 4.44.2
+Time: 6036ms
+Built at: 12/21/2020 12:07:01 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-b865982e2d58326729a4.js   2.62 MiB        Index  [emitted] [immutable]  Index
+      js/Index-b865982e2d58326729a4.js.map   2.89 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-b865982e2d58326729a4.js js/Index-b865982e2d58326729a4.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1010 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 38 hidden modules
+
+Completed 200 OK in 10491ms (Views: 10489.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:07:26 +1100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kyleswaffield/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (1.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2309ms (Views: 2307.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:08:03 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.5ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: b8d1d2bcc95d0fe86605
+Version: webpack 4.44.2
+Time: 4802ms
+Built at: 12/21/2020 12:08:10 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-4a6d8a06a222b8235643.js   2.62 MiB        Index  [emitted] [immutable]  Index
+      js/Index-4a6d8a06a222b8235643.js.map   2.89 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-4a6d8a06a222b8235643.js js/Index-4a6d8a06a222b8235643.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1010 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 38 hidden modules
+
+Completed 200 OK in 7068ms (Views: 7066.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:08:20 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.7ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: 98158976b560cac6a88d
+Version: webpack 4.44.2
+Time: 4713ms
+Built at: 12/21/2020 12:08:27 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-ad1c49cdfe5be9e4eeb6.js   2.62 MiB        Index  [emitted] [immutable]  Index
+      js/Index-ad1c49cdfe5be9e4eeb6.js.map   2.89 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-ad1c49cdfe5be9e4eeb6.js js/Index-ad1c49cdfe5be9e4eeb6.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1010 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 38 hidden modules
+
+Completed 200 OK in 7194ms (Views: 7192.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:09:01 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.8ms)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 997073f78c996e398f62
+Version: webpack 4.44.2
+Time: 6757ms
+Built at: 12/21/2020 12:09:12 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-c1804e6b2952363f3b70.js   2.62 MiB        Index  [emitted] [immutable]  Index
+      js/Index-c1804e6b2952363f3b70.js.map   2.89 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-c1804e6b2952363f3b70.js js/Index-c1804e6b2952363f3b70.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1000 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 38 hidden modules
+
+ERROR in ./app/javascript/routes/Index.jsx
+Module not found: Error: Can't resolve '../components/Recipes' in '/Users/kyleswaffield/sei/projects/rails_react_recipe/app/javascript/routes'
+ @ ./app/javascript/routes/Index.jsx 5:0-44 33:13-20
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+Completed 200 OK in 11092ms (Views: 11090.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:12:56 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: b91bc66443efa1a5f60d
+Version: webpack 4.44.2
+Time: 6434ms
+Built at: 12/21/2020 12:13:08 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-96e03723203584f45829.js   2.63 MiB        Index  [emitted] [immutable]  Index
+      js/Index-96e03723203584f45829.js.map    2.9 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-96e03723203584f45829.js js/Index-96e03723203584f45829.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1000 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 39 hidden modules
+
+Completed 200 OK in 11470ms (Views: 11468.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:13:14 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 37ms (Views: 15.1ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:24:43 +1100
+Processing by Api::V1::RecipesController#index as HTML
+  [1m[36mRecipe Load (2.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:25:03 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Compiling...
+Started GET "/recipes" for ::1 at 2020-12-21 00:25:06 +1100
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"recipes"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.5ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: b91bc66443efa1a5f60d
+Version: webpack 4.44.2
+Time: 7713ms
+Built at: 12/21/2020 12:25:15 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-96e03723203584f45829.js   2.63 MiB        Index  [emitted] [immutable]  Index
+      js/Index-96e03723203584f45829.js.map    2.9 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-96e03723203584f45829.js js/Index-96e03723203584f45829.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1000 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 39 hidden modules
+
+Completed 200 OK in 12038ms (Views: 12036.2ms | ActiveRecord: 0.0ms)
+
+
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: b91bc66443efa1a5f60d
+Version: webpack 4.44.2
+Time: 6540ms
+Built at: 12/21/2020 12:25:16 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-96e03723203584f45829.js   2.63 MiB        Index  [emitted] [immutable]  Index
+      js/Index-96e03723203584f45829.js.map    2.9 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-96e03723203584f45829.js js/Index-96e03723203584f45829.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1000 bytes {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 39 hidden modules
+
+Completed 200 OK in 9529ms (Views: 9528.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:25:17 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (4.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:27:04 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 3f5720e1256dde880803
+Version: webpack 4.44.2
+Time: 6712ms
+Built at: 12/21/2020 12:27:15 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-93ae22cfc62e1d150917.js   2.63 MiB        Index  [emitted] [immutable]  Index
+      js/Index-93ae22cfc62e1d150917.js.map    2.9 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-93ae22cfc62e1d150917.js js/Index-93ae22cfc62e1d150917.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.22 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 40 hidden modules
+
+ERROR in ./app/javascript/components/Recipe.jsx
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/kyleswaffield/sei/projects/rails_react_recipe/app/javascript/components/Recipe.jsx: Unexpected token (97:0)
+
+  95 | }
+  96 | export default
+> 97 | 
+     | ^
+    at Object._raise (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:748:17)
+    at Object.raiseWithData (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:741:17)
+    at Object.raise (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:735:17)
+    at Object.unexpected (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9101:16)
+    at Object.parseExprAtom (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10575:20)
+    at Object.parseExprAtom (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:4763:20)
+    at Object.parseExprSubscripts (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10150:23)
+    at Object.parseUpdate (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10130:21)
+    at Object.parseMaybeUnary (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:10119:17)
+    at Object.parseExprOps (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9989:23)
+    at Object.parseMaybeConditional (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9963:23)
+    at Object.parseMaybeAssign (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9926:21)
+    at /Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9893:39
+    at Object.allowInAnd (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:11541:16)
+    at Object.parseMaybeAssignAllowIn (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:9893:17)
+    at Object.parseExportDefaultExpression (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:12885:24)
+    at Object.parseExport (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:12795:31)
+    at Object.parseStatementContent (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:11782:27)
+    at Object.parseStatement (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:11676:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:12258:25)
+    at Object.parseBlockBody (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:12249:10)
+    at Object.parseTopLevel (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:11607:10)
+    at Object.parse (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:13415:10)
+    at parse (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/parser/lib/index.js:13468:38)
+    at parser (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/core/lib/transformation/normalize-file.js:99:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/kyleswaffield/sei/projects/rails_react_recipe/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+ @ ./app/javascript/routes/Index.jsx 6:0-42 44:13-19
+ @ ./app/javascript/components/App.jsx
+ @ ./app/javascript/packs/Index.jsx
+
+Completed 200 OK in 10769ms (Views: 10766.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:28:47 +1100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/kyleswaffield/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (1.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2418ms (Views: 2416.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:29:16 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.5ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: f123cd393f34df41c6c7
+Version: webpack 4.44.2
+Time: 6474ms
+Built at: 12/21/2020 12:29:26 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-933d604cceb66473dfc0.js   2.64 MiB        Index  [emitted] [immutable]  Index
+      js/Index-933d604cceb66473dfc0.js.map    2.9 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-933d604cceb66473dfc0.js js/Index-933d604cceb66473dfc0.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.22 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 40 hidden modules
+
+Completed 200 OK in 10449ms (Views: 10447.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:29:29 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 41ms (Views: 17.0ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/api/v1/show/5" for ::1 at 2020-12-21 00:29:35 +1100
+Processing by Api::V1::RecipesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+Completed 200 OK in 11ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:29:39 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/show/8" for ::1 at 2020-12-21 00:29:41 +1100
+Processing by Api::V1::RecipesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:29:48 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/show/9" for ::1 at 2020-12-21 00:29:49 +1100
+Processing by Api::V1::RecipesController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:29:55 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 00:31:33 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:31:35 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/show/8" for ::1 at 2020-12-21 00:31:40 +1100
+Processing by Api::V1::RecipesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mRecipe Load (1.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 00:32:22 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/show/8" for ::1 at 2020-12-21 09:04:58 +1100
+Processing by Api::V1::RecipesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+Completed 200 OK in 15ms (Views: 3.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 09:05:02 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/recipes" for ::1 at 2020-12-21 09:16:52 +1100
+Processing by HomepageController#index as HTML
+  Parameters: {"path"=>"recipes"}
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (1.4ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: f1614d9bd1795dc46f92
+Version: webpack 4.44.2
+Time: 6985ms
+Built at: 12/21/2020 9:17:04 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-c3f249c34ca181848c94.js   2.65 MiB        Index  [emitted] [immutable]  Index
+      js/Index-c3f249c34ca181848c94.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-c3f249c34ca181848c94.js js/Index-c3f249c34ca181848c94.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.47 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 41 hidden modules
+
+Completed 200 OK in 11876ms (Views: 11871.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 09:17:05 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (3.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/api/v1/recipes/create" for ::1 at 2020-12-21 09:20:51 +1100
+Processing by Api::V1::RecipesController#create as */*
+  Parameters: {"name"=>"Test Recipe", "ingredients"=>"4 Slices cheese, 2pc Bread, spice of your choice", "instruction"=>"1. Toast bread<br> <br>2. Place oven on grill<br> <br>3. Place cheese on bread and put under the oven grill<br> <br>4. When cheese is melted to your liking, remove from oven<br> <br>5. Spice as desired", "recipe"=>{"name"=>"Test Recipe", "ingredients"=>"4 Slices cheese, 2pc Bread, spice of your choice", "instruction"=>"1. Toast bread<br> <br>2. Place oven on grill<br> <br>3. Place cheese on bread and put under the oven grill<br> <br>4. When cheese is melted to your liking, remove from oven<br> <br>5. Spice as desired"}}
+Unpermitted parameter: :recipe
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:8
+  [1m[36mRecipe Create (2.2ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "ingredients", "instruction", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Recipe"], ["ingredients", "4 Slices cheese, 2pc Bread, spice of your choice"], ["instruction", "1. Toast bread<br> <br>2. Place oven on grill<br> <br>3. Place cheese on bread and put under the oven grill<br> <br>4. When cheese is melted to your liking, remove from oven<br> <br>5. Spice as desired"], ["created_at", "2020-12-20 22:20:51.971042"], ["updated_at", "2020-12-20 22:20:51.971042"]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:8
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:8
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/api/v1/show/10" for ::1 at 2020-12-21 09:20:52 +1100
+Processing by Api::V1::RecipesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 09:21:04 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-12-21 09:57:32 +1100
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (0.4ms)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/kyleswaffield/sei/projects/rails_react_recipe/public/packs
+[Webpacker] Hash: fc2e78ec5ce4b431fd2f
+Version: webpack 4.44.2
+Time: 6672ms
+Built at: 12/21/2020 9:57:44 AM
+                                     Asset       Size       Chunks                         Chunk Names
+          js/Index-1133aef250da0dd91f12.js   2.65 MiB        Index  [emitted] [immutable]  Index
+      js/Index-1133aef250da0dd91f12.js.map   2.91 MiB        Index  [emitted] [dev]        Index
+    js/application-2181adcc3224cdc0c9c1.js   4.72 KiB  application  [emitted] [immutable]  application
+js/application-2181adcc3224cdc0c9c1.js.map    4.5 KiB  application  [emitted] [dev]        application
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-2181adcc3224cdc0c9c1.js js/application-2181adcc3224cdc0c9c1.js.map
+Entrypoint Index = js/Index-1133aef250da0dd91f12.js js/Index-1133aef250da0dd91f12.js.map
+[./app/javascript/packs/Index.jsx] 670 bytes {Index} [built]
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/routes/Index.jsx] 1.47 KiB {Index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {Index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {Index} [built]
+    + 41 hidden modules
+
+Completed 200 OK in 11701ms (Views: 11698.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 09:57:49 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/show/9" for ::1 at 2020-12-21 09:58:04 +1100
+Processing by Api::V1::RecipesController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+Completed 200 OK in 10ms (Views: 1.0ms | ActiveRecord: 5.8ms)
+
+
+Started DELETE "/api/v1/destroy/9" for ::1 at 2020-12-21 09:58:10 +1100
+Processing by Api::V1::RecipesController#destroy as */*
+  Parameters: {"id"=>"9", "recipe"=>{}}
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:25
+  [1m[36mRecipe Destroy (17.0ms)[0m  [1m[31mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:25
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:25
+Completed 200 OK in 31ms (Views: 0.8ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 09:58:10 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (5.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 09:58:23 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/show/10" for ::1 at 2020-12-21 09:58:28 +1100
+Processing by Api::V1::RecipesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 09:58:34 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/show/10" for ::1 at 2020-12-21 09:58:39 +1100
+Processing by Api::V1::RecipesController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 10:19:18 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (2.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 10:19:23 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/show/3" for ::1 at 2020-12-21 10:19:25 +1100
+Processing by Api::V1::RecipesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/recipes_controller.rb:36
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/recipes/index" for ::1 at 2020-12-21 10:19:28 +1100
+Processing by Api::V1::RecipesController#index as */*
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."created_at" DESC[0m
+  ↳ app/controllers/api/v1/recipes_controller.rb:4
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.9ms)
+
+
